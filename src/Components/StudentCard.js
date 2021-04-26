@@ -6,6 +6,7 @@ import {
   CardTitle
 } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { deleteStudent } from '../helpers/data/studentData';
 
 const StudentCard = ({
   firebaseKey,
@@ -15,8 +16,8 @@ const StudentCard = ({
   setStudents
 }) => {
   const handleClick = () => {
-    console.warn(firebaseKey);
-    console.warn(setStudents);
+    deleteStudent(firebaseKey)
+      .then((studentsArray) => setStudents(studentsArray));
   };
 
   return (
@@ -30,7 +31,7 @@ const StudentCard = ({
 };
 
 StudentCard.propTypes = {
-  firebaseKey: PropTypes.string.isRequired,
+  firebaseKey: PropTypes.string,
   name: PropTypes.string.isRequired,
   teacher: PropTypes.string.isRequired,
   grade: PropTypes.number.isRequired,
