@@ -21,7 +21,7 @@ function App() {
           name={studentInfo.name}
           teacher={studentInfo.teacher}
           grade={Number(studentInfo.grade)}
-          handleClick={() => console.warn(`${studentInfo.name}'s teacher is ${studentInfo.teacher}`)}
+          setStudents={setStudents}
         />
       ))}
     </div>
