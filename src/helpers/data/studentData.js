@@ -11,7 +11,7 @@ const getStudents = () => new Promise((resolve, reject) => {
 
 const deleteStudent = (firebaseKey) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/students/${firebaseKey}.json`)
-    .then(() => getStudents().then((studentsArray) => resolve(studentsArray)))
+    .then(() => getStudents().then((studentArray) => resolve(studentArray)))
     .catch((error) => reject(error));
 });
 

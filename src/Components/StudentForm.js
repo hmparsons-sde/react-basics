@@ -23,7 +23,7 @@ const StudentForm = ({ formTitle, setStudents }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // add a student to firebase
-    addStudent(student).then((studentsArray) => setStudents(studentsArray));
+    addStudent(student).then((studentArray) => setStudents(studentArray));
   };
 
   return (

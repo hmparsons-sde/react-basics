@@ -17,21 +17,21 @@ const StudentCard = ({
 }) => {
   const handleClick = () => {
     deleteStudent(firebaseKey)
-      .then((studentsArray) => setStudents(studentsArray));
+      .then((studentArray) => setStudents(studentArray));
   };
 
   return (
     <Card body>
-        <CardTitle tag="h5">{name}</CardTitle>
-        <CardText>Grade: {grade}</CardText>
-        <CardText>Teacher: {teacher}</CardText>
-        <Button color="danger" onClick={handleClick}>Delete Student</Button>
+      <CardTitle tag="h5">{name}</CardTitle>
+      <CardText>Grade: {grade}</CardText>
+      <CardText>Teacher: {teacher}</CardText>
+      <Button color="danger" onClick={handleClick}>Delete Student</Button>
     </Card>
   );
 };
 
 StudentCard.propTypes = {
-  firebaseKey: PropTypes.string,
+  firebaseKey: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   teacher: PropTypes.string.isRequired,
   grade: PropTypes.number.isRequired,
