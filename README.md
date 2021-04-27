@@ -6,6 +6,6 @@ In-class introduction to basic React.js concepts:
 - Props
 - Router DOM
 
-## Link to code: 
+## Link to class code: 
 
 https://github.com/nss-evening-cohort-14/all-things-react
