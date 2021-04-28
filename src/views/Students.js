@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import StudentCard from '../Components/StudentCard';
-import { getStudents } from '../helpers/data/studentData';
-import StudentForm from '../Components/StudentForm';
 
-function App() {
-  const [students, setStudents] = useState([]);
-
-  useEffect(() => {
-    getStudents().then((resp) => setStudents(resp));
-  }, []);
-
+function Students({ students, setStudents }) {
   return (
     <>
-      <StudentForm
-        formTitle='Add Student'
-        setStudents={setStudents}
-      />
-      <hr/>
       <div className="card-container">
         {students.map((studentInfo) => (
           <StudentCard
@@ -33,4 +21,9 @@ function App() {
   );
 }
 
-export default App;
+Students.propTypes = {
+  students: PropTypes.array.isRequired,
+  setStudents: PropTypes.func.isRequired
+};
+
+export default Students;
