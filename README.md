@@ -5,6 +5,7 @@ In-class introduction to basic React.js concepts:
 - Components
 - Props
 - Router DOM
+- Auth using Firebase
 
 ## Link to class code: 
 
