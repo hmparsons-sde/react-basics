@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Home({ user }) {
+export default function Home({ user }) {
   return (
     <div>
       { user
@@ -16,4 +16,4 @@ Home.propTypes = {
   user: PropTypes.any
 };
 
-export default Home;
+// dynamic routes - naming url /:taco, has to match in Home.js to Routes.js

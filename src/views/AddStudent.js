@@ -5,16 +5,13 @@ import StudentForm from '../Components/StudentForm';
 function AddStudent({ setStudents }) {
   return (
     <div>
-      <StudentForm
-        formTitle='Add Student'
-        setStudents={setStudents}
-      />
+      <StudentForm formTitle="Add Student" setStudents={setStudents} />
     </div>
   );
 }
 
 AddStudent.propTypes = {
-  setStudents: PropTypes.func.isRequired
+  setStudents: PropTypes.func.isRequired,
 };
 
 export default AddStudent;
