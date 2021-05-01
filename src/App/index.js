@@ -21,7 +21,7 @@ function App() {
           fullName: authed.displayName,
           profileImage: authed.photoURL,
           uid: authed.uid,
-          username: authed.email.split('@gmail.com')[0]
+          username: authed.email.split('@gmail.com')[0],
         };
         setUser(userInfoObj);
       } else if (user || user === null) {
@@ -34,11 +34,7 @@ function App() {
     <>
       <Router>
         <NavBar user={user} />
-        <Routes
-          user={user}
-          students={students}
-          setStudents={setStudents}
-        />
+        <Routes user={user} students={students} setStudents={setStudents} />
       </Router>
     </>
   );

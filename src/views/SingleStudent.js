@@ -8,16 +8,11 @@ export default function SingleStudent() {
   const { id } = useParams();
 
   useEffect(() => {
-    getSingleStudent(id)
-      .then(setStudent);
+    getSingleStudent(id).then(setStudent);
   }, []);
-  return (
-    <div>
-      { student.name }
-    </div>
-  );
+  return <div>{student.name}</div>;
 }
 
 SingleStudent.propTypes = {
-  id: PropTypes.string
+  id: PropTypes.string,
 };
