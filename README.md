@@ -6,6 +6,7 @@ In-class introduction to basic React.js concepts:
 - Props
 - Router DOM
 - Auth using Firebase
+- Dynamic routes
 
 ## Link to class code: 
 
