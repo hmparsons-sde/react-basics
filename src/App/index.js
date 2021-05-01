@@ -8,7 +8,7 @@ import Routes from '../helpers/Routes';
 // Parent file
 function App() {
   const [students, setStudents] = useState([]);
-  const [user, setUser] = (null); // Null because nobody is signed in from the beginning.
+  const [user, setUser] = ([]); // Null because nobody is signed in from the beginning.
 
   useEffect(() => {
     getStudents().then(setStudents);
