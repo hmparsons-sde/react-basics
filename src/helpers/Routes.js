@@ -5,11 +5,13 @@ import AddStudent from '../views/AddStudent';
 import Home from '../views/Home';
 import Students from '../views/Students';
 
-export default function Routes({ students, setStudents }) {
+export default function Routes({ user, students, setStudents }) {
   return (
     <div>
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/'
+        component={() => <Home user={user} />}
+        />
         <Route
           path='/students'
           component={() => <Students students={students} setStudents={setStudents} />}
@@ -25,5 +27,6 @@ export default function Routes({ students, setStudents }) {
 
 Routes.propTypes = {
   students: PropTypes.array.isRequired,
-  setStudents: PropTypes.func.isRequired
+  setStudents: PropTypes.func.isRequired,
+  user: PropTypes.any
 };
