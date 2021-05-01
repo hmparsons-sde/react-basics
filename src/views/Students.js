@@ -7,14 +7,7 @@ function Students({ students, setStudents }) {
     <>
       <div className="card-container">
         {students.map((studentInfo) => (
-          <StudentCard
-            key={studentInfo.firebaseKey}
-            firebaseKey={studentInfo.firebaseKey}
-            name={studentInfo.name}
-            teacher={studentInfo.teacher}
-            grade={Number(studentInfo.grade)}
-            setStudents={setStudents}
-          />
+          <StudentCard key={studentInfo.firebaseKey} firebaseKey={studentInfo.firebaseKey} name={studentInfo.name} teacher={studentInfo.teacher} grade={Number(studentInfo.grade)} setStudents={setStudents} />
         ))}
       </div>
     </>
@@ -23,7 +16,7 @@ function Students({ students, setStudents }) {
 
 Students.propTypes = {
   students: PropTypes.array.isRequired,
-  setStudents: PropTypes.func.isRequired
+  setStudents: PropTypes.func.isRequired,
 };
 
 export default Students;
