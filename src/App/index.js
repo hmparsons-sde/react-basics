@@ -41,6 +41,7 @@ function App() {
 }
 
 export default App;
+// store user object in state
 // setUser(false) allows us to interact with multiple users & change their statuses.
 // Allows us to have multiple states for our user. Null value allows us to do cool UI.
 // 3 states for user. 'Null' for onLoad, 'false' for logged out user, 'true' for logged in user.
